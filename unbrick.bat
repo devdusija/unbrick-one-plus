@@ -2,6 +2,9 @@
 ECHO  #################################
 ECHO  #   Flashing base firmware     #
 ECHO  #################################
+bin\fastboot -w
+bin\fastboot --set-active=a
+
 bin\fastboot flash --slot=all abl "img\abl.img"
 bin\fastboot flash apdp "img\apdp.img"
 bin\fastboot flash --slot=all bluetooth "img\bluetooth.img"
